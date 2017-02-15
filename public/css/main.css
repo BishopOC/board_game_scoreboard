@@ -1,3 +1,8 @@
+body {
+  margin:0;
+  padding:0;
+  background: -webkit-linear-gradient(left, #828282, #E8E8E8, white);
+}
 div {
   display:flex;
   justify-content: center;
@@ -16,15 +21,24 @@ div input {
   width: 150px;
   font-size: 20px;
   border-radius: 5px;
-  border: solid black 1px;
+  border: solid grey 1px;
   margin-right: 1em;
-  text-align: left;
+  text-align: center;
+  background-color: inherit;
+  color: #5F6060;
+}
+div input:focus{
+  outline:none;
 }
 div p {
   font-size: 30px;
   margin-right: 1em;
   width:50px;
-  text-align: left;
+  text-align: center;
+}
+
+div p.score4{
+  color: limegreen;
 }
 
 div button {
@@ -36,6 +50,9 @@ div button {
   margin-right: 0.5em;
   font-size: 16px;
 }
+div button:focus{
+  outline: none;
+}
 button.p1reduce, button.p2reduce, button.p3reduce, button.p4reduce, button.p5reduce, button.p6reduce {
   height: 2em;
   width: 2em;
@@ -44,4 +61,34 @@ button.p1reduce, button.p2reduce, button.p3reduce, button.p4reduce, button.p5red
   background-color: white;
   margin-left: 1em;
   font-size: 16px;
+}
+
+button.p1add, button.p1reduce {
+  border-color: #C18181 #F7A3A3 #C18181 #A87474;
+  background: -webkit-linear-gradient(left, #CE7979, #FCC2C2);
+}
+
+button.p2add, button.p2reduce {
+  border-color: #C1AC81 #F7D7A3 #C1AC81 #A89674;
+  background: -webkit-linear-gradient(left, #CEB979, #FCE9C2);
+}
+
+button.p3add, button.p3reduce {
+  border-color: #C1BF81 #F7F7A3 #C1BF81 #A8A374;
+  background: -webkit-linear-gradient(left, #CECE79, #FFFDC4);
+}
+
+button.p4add, button.p4reduce {
+  border-color: #83C4A3 #A2F9CC #83C4A3 #75AA90;
+  background: -webkit-linear-gradient(left, #85E2AB, #C4FFDC);
+}
+
+button.p5add, button.p5reduce {
+  border-color: #83C4A3 #A2F9CC #83C4A3 #75AA90;
+  background: -webkit-linear-gradient(left, #85E2AB, #C4FFDC);
+}
+
+button.p6add, button.p6reduce {
+  border-color: #83C4A3 #A2F9CC #83C4A3 #75AA90;
+  background: -webkit-linear-gradient(left, #85E2AB, #C4FFDC);
 }

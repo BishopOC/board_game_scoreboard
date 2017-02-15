@@ -28,7 +28,9 @@ var scoreboardApp = {
     scoreboardApp.render();
   },
   blur: function(){
-    scoreboardApp.name.style.border = "thick none black";
+    scoreboardApp.name.style.border = 'solid 5px';
+    scoreboardApp.name.style.borderColor = "#C18181 #F7A3A3 #C18181 #A87474";
+    scoreboardApp.name.style.backgroundImage = '-webkit-linear-gradient(left, #CE7979, #FCC2C2)';
   }
 };
 scoreboardApp.start();
@@ -63,7 +65,9 @@ var scoreboardApp2 = {
     scoreboardApp2.render();
   },
   blur: function(){
-    scoreboardApp2.name.style.border = "thick none black";
+    scoreboardApp2.name.style.border = 'solid 5px';
+    scoreboardApp2.name.style.borderColor = "#C1AC81 #F7D7A3 #C1AC81 #A89674";
+    scoreboardApp2.name.style.backgroundImage = '-webkit-linear-gradient(left, #CEB979, #FCE9C2)';
   }
 };
 scoreboardApp2.start();
@@ -98,7 +102,10 @@ var scoreboardApp3 = {
     scoreboardApp3.render();
   },
   blur: function(){
-    scoreboardApp3.name.style.border = "thick none black";
+    scoreboardApp3.name.style.border = 'solid 5px';
+    scoreboardApp3.name.style.borderColor = "#C1BF81 #F7F7A3 #C1BF81 #A8A374";
+    scoreboardApp3.name.style.backgroundImage = '-webkit-linear-gradient(left, #CECE79, #FFFDC4)';
+
   }
 };
 scoreboardApp3.start();
@@ -133,7 +140,9 @@ var scoreboardApp4 = {
     scoreboardApp4.render();
   },
   blur: function(){
-    scoreboardApp4.name.style.border = "thick none black";
+    scoreboardApp4.name.style.border = 'solid 5px';
+    scoreboardApp4.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
+    scoreboardApp4.name.style.backgroundImage = '-webkit-linear-gradient(left, #79CEA4, #85E2AB, #C4FFDC)';
   }
 };
 scoreboardApp4.start();
@@ -168,7 +177,9 @@ var scoreboardApp5 = {
     scoreboardApp5.render();
   },
   blur: function(){
-    scoreboardApp5.name.style.border = "thick none black";
+    scoreboardApp5.name.style.border = 'solid 5px';
+    scoreboardApp5.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
+    scoreboardApp5.name.style.backgroundImage = '-webkit-linear-gradient(left, #79CEA4, #85E2AB, #C4FFDC)';
   }
 };
 scoreboardApp5.start();
@@ -203,7 +214,9 @@ var scoreboardApp6 = {
     scoreboardApp6.render();
   },
   blur: function(){
-    scoreboardApp6.name.style.border = "thin none black";
+    scoreboardApp6.name.style.border = 'solid 5px';
+    scoreboardApp6.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
+    scoreboardApp6.name.style.backgroundImage = '-webkit-linear-gradient(left, #79CEA4, #85E2AB, #C4FFDC)';
   }
 };
 scoreboardApp6.start();

@@ -18,6 +18,7 @@ var scoreboardApp = {
     scoreboardApp.addButton.addEventListener('click', scoreboardApp.addScore);
     scoreboardApp.reduceButton.addEventListener('click', scoreboardApp.reduceScore);
     scoreboardApp.name.addEventListener('blur', scoreboardApp.blur);
+
   },
   addScore: function(){
     scoreboardApp.scoreboard += 1;
@@ -31,7 +32,8 @@ var scoreboardApp = {
     // scoreboardApp.name.style.border = 'solid 5px';
     // scoreboardApp.name.style.borderColor = "";
     scoreboardApp.name.style.backgroundColor = '#ED0E0E';
-    scoreboardApp.header.style.backgroundColor = 'black';
+    scoreboardApp.addButton.style.backgroundColor = '#FF4242';
+    scoreboardApp.reduceButton.style.backgroundColor = '#FF4242';
   }
 };
 scoreboardApp.start();
@@ -69,6 +71,8 @@ var scoreboardApp2 = {
     // scoreboardApp2.name.style.border = 'solid 5px';
     // scoreboardApp2.name.style.borderColor = "#C1AC81 #F7D7A3 #C1AC81 #A89674";
     scoreboardApp2.name.style.backgroundColor = '#1AED9C';
+    scoreboardApp2.addButton.style.backgroundColor = '#42FFD2';
+    scoreboardApp2.reduceButton.style.backgroundColor = '#42FFD2';
   }
 };
 scoreboardApp2.start();
@@ -106,7 +110,8 @@ var scoreboardApp3 = {
     // scoreboardApp3.name.style.border = 'solid 5px';
     // scoreboardApp3.name.style.borderColor = "#C1BF81 #F7F7A3 #C1BF81 #A8A374";
     scoreboardApp3.name.style.backgroundColor = '#53ED00';
-
+    scoreboardApp3.addButton.style.backgroundColor = '#42FF6B';
+    scoreboardApp3.reduceButton.style.backgroundColor = '#42FF6B';
   }
 };
 scoreboardApp3.start();
@@ -144,6 +149,8 @@ var scoreboardApp4 = {
     // scoreboardApp4.name.style.border = 'solid 5px';
     // scoreboardApp4.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
     scoreboardApp4.name.style.backgroundColor = '#EA19C4';
+    scoreboardApp4.addButton.style.backgroundColor = '#FF42FF';
+    scoreboardApp4.reduceButton.style.backgroundColor = '#FF42FF';
   }
 };
 scoreboardApp4.start();
@@ -181,6 +188,8 @@ var scoreboardApp5 = {
     // scoreboardApp5.name.style.border = 'solid 5px';
     // scoreboardApp5.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
     scoreboardApp5.name.style.backgroundColor = '#253DED';
+    scoreboardApp5.addButton.style.backgroundColor = '#4255FF';
+    scoreboardApp5.reduceButton.style.backgroundColor = '#4255FF';
   }
 };
 scoreboardApp5.start();
@@ -218,6 +227,8 @@ var scoreboardApp6 = {
     // scoreboardApp6.name.style.border = 'solid 5px';
     // scoreboardApp6.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
     scoreboardApp6.name.style.backgroundColor = '#FF6D0C';
+    scoreboardApp6.addButton.style.backgroundColor = '#FF7E42';
+    scoreboardApp6.reduceButton.style.backgroundColor = '#FF7E42';
   }
 };
 scoreboardApp6.start();
@@ -255,6 +266,8 @@ var scoreboardApp7 = {
     // scoreboardApp.name.style.border = 'solid 5px';
     // scoreboardApp.name.style.borderColor = "";
     scoreboardApp7.name.style.backgroundColor = '#ED0E0E';
+    scoreboardApp7.addButton.style.backgroundColor = '#FF4242';
+    scoreboardApp7.reduceButton.style.backgroundColor = '#FF4242';
   }
 };
 scoreboardApp7.start();
@@ -292,6 +305,8 @@ var scoreboardApp8 = {
     // scoreboardApp2.name.style.border = 'solid 5px';
     // scoreboardApp2.name.style.borderColor = "#C1AC81 #F7D7A3 #C1AC81 #A89674";
     scoreboardApp8.name.style.backgroundColor = '#1AED9C';
+    scoreboardApp8.addButton.style.backgroundColor = '#42FFD2';
+    scoreboardApp8.reduceButton.style.backgroundColor = '#42FFD2';
   }
 };
 scoreboardApp8.start();
@@ -329,7 +344,8 @@ var scoreboardApp9 = {
     // scoreboardApp3.name.style.border = 'solid 5px';
     // scoreboardApp3.name.style.borderColor = "#C1BF81 #F7F7A3 #C1BF81 #A8A374";
     scoreboardApp9.name.style.backgroundColor = '#53ED00';
-
+    scoreboardApp9.addButton.style.backgroundColor = '#42FF6B';
+    scoreboardApp9.reduceButton.style.backgroundColor = '#42FF6B';
   }
 };
 scoreboardApp9.start();
@@ -367,6 +383,8 @@ var scoreboardApp10 = {
     // scoreboardApp10.name.style.border = 'solid 5px';
     // scoreboardApp10.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
     scoreboardApp10.name.style.backgroundColor = '#EA19C4';
+    scoreboardApp10.addButton.style.backgroundColor = '#FF42FF';
+    scoreboardApp10.reduceButton.style.backgroundColor = '#FF42FF';
   }
 };
 scoreboardApp10.start();
@@ -404,6 +422,8 @@ var scoreboardApp11 = {
     // scoreboardApp11.name.style.border = 'solid 5px';
     // scoreboardApp11.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
     scoreboardApp11.name.style.backgroundColor = '#253DED';
+    scoreboardApp11.addButton.style.backgroundColor = '#4255FF';
+    scoreboardApp11.reduceButton.style.backgroundColor = '#4255FF';
   }
 };
 scoreboardApp11.start();
@@ -441,6 +461,8 @@ var scoreboardApp12 = {
     // scoreboardApp12.name.style.border = 'solid 5px';
     // scoreboardApp12.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
     scoreboardApp12.name.style.backgroundColor = '#FF6D0C';
+    scoreboardApp12.addButton.style.backgroundColor = '#FF7E42';
+    scoreboardApp12.reduceButton.style.backgroundColor = '#FF7E42';
   }
 };
 scoreboardApp12.start();

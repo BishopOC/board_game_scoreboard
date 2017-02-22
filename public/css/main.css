@@ -81,61 +81,61 @@ button.uni {
 }
 
 button.p1add, button.p1reduce {
-  background: #FF4242;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p2add, button.p2reduce {
-  background: #42FFD2;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p3add, button.p3reduce {
-  background: #42FF6B;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p4add, button.p4reduce {
-  background: #FF42FF;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p5add, button.p5reduce {
-  background: #4255FF;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p6add, button.p6reduce {
-  background: #FF7E42;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p7add, button.p7reduce {
-  background: #FF4242;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p8add, button.p8reduce {
-  background: #42FFD2;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p9add, button.p9reduce {
-  background: #42FF6B;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p10add, button.p10reduce {
-  background: #FF42FF;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p11add, button.p11reduce {
-  background: #4255FF;
+  background: inherit;
   border-radius: 15px;
 }
 
 button.p12add, button.p12reduce {
-  background: #FF7E42;
+  background: inherit;
   border-radius: 15px;
 }

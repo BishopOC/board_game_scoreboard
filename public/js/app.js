@@ -75,3 +75,26 @@ scoreboardp11.start();
 
 var scoreboardp12 = scoreboard('.p12', '.score12', '.p12add', '.p12reduce', '#FF6D0C','#FF7E42','#FF7E42');
 scoreboardp12.start();
+
+ 
+var headerBlur = {
+  start: function(){
+    headerBlur.cacheDom();
+    headerBlur.addEventListeners();
+  },
+  cacheDom: function(){
+    headerBlur.header = document.querySelector('header input.header');
+    headerBlur.header2 = document.querySelector('header input.header2');
+  },
+  addEventListeners: function(){
+    headerBlur.header.addEventListener('blur', headerBlur.blur);
+    headerBlur.header2.addEventListener('blur', headerBlur.blur2);
+  },
+  blur: function(){
+    headerBlur.header.style.backgroundColor = 'black';
+  },
+  blur2: function (){
+    headerBlur.header2.style.backgroundColor = 'black';
+  }
+};
+headerBlur.start();

@@ -1,490 +1,77 @@
+function  scoreboard (name, scoreCounter, addButton, reduceButton, nameColor, addColor, reduceColor) {
 var scoreboardApp = {
+
   scoreboard: 0,
   start: function(){
-    scoreboardApp.cacheDom();
-    scoreboardApp.addEventListeners();
-    scoreboardApp.render();
+    this.cacheDom();
+    this.addEventListeners();
+    this.render();
   },
   cacheDom: function(){
-    scoreboardApp.name = document.querySelector('.p1');
-    scoreboardApp.scoreCounter = document.querySelector('.score1');
-    scoreboardApp.addButton = document.querySelector('.p1add');
-    scoreboardApp.reduceButton = document.querySelector('.p1reduce');
+    this.name = document.querySelector(name);
+    this.scoreCounter = document.querySelector(scoreCounter);
+    this.addButton = document.querySelector(addButton);
+    this.reduceButton = document.querySelector(reduceButton);
   },
   render: function(){
-    scoreboardApp.scoreCounter.innerHTML = scoreboardApp.scoreboard;
+    this.scoreCounter.innerHTML = this.scoreboard;
   },
   addEventListeners: function(){
-    scoreboardApp.addButton.addEventListener('click', scoreboardApp.addScore);
-    scoreboardApp.reduceButton.addEventListener('click', scoreboardApp.reduceScore);
-    scoreboardApp.name.addEventListener('blur', scoreboardApp.blur);
+    this.addButton.addEventListener('click', this.addScore.bind(this));
+    this.reduceButton.addEventListener('click', this.reduceScore.bind(this));
+    this.name.addEventListener('blur', this.blur.bind(this));
 
   },
   addScore: function(){
-    scoreboardApp.scoreboard += 1;
-    scoreboardApp.render();
+    this.scoreboard += 1;
+    this.render();
   },
   reduceScore: function(){
-    scoreboardApp.scoreboard -= 1;
-    scoreboardApp.render();
+    this.scoreboard -= 1;
+    this.render();
   },
   blur: function(){
-    // scoreboardApp.name.style.border = 'solid 5px';
-    // scoreboardApp.name.style.borderColor = "";
-    scoreboardApp.name.style.backgroundColor = '#ED0E0E';
-    scoreboardApp.addButton.style.backgroundColor = '#FF4242';
-    scoreboardApp.reduceButton.style.backgroundColor = '#FF4242';
+    // this.name.style.border = 'solid 5px';
+    // this.name.style.borderColor = "";
+    this.name.style.backgroundColor = nameColor;
+    this.addButton.style.backgroundColor = addColor;
+    this.reduceButton.style.backgroundColor = reduceColor;
   }
 };
-scoreboardApp.start();
+return scoreboardApp;
+}
+var scoreboardp1 = scoreboard('.p1', '.score1', '.p1add', '.p1reduce', '#ED0E0E', '#FF4242', '#FF4242');
+scoreboardp1.start();
 
-var scoreboardApp2 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp2.cacheDom();
-    scoreboardApp2.addEventListeners();
-    scoreboardApp2.render();
-  },
-  cacheDom: function(){
-    scoreboardApp2.name = document.querySelector('.p2');
-    scoreboardApp2.scoreCounter = document.querySelector('.score2');
-    scoreboardApp2.addButton = document.querySelector('.p2add');
-    scoreboardApp2.reduceButton = document.querySelector('.p2reduce');
-  },
-  render: function(){
-    scoreboardApp2.scoreCounter.innerHTML = scoreboardApp2.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp2.addButton.addEventListener('click', scoreboardApp2.addScore);
-    scoreboardApp2.reduceButton.addEventListener('click', scoreboardApp2.reduceScore);
-    scoreboardApp2.name.addEventListener('blur', scoreboardApp2.blur);
-  },
-  addScore: function(){
-    scoreboardApp2.scoreboard += 1;
-    scoreboardApp2.render();
-  },
-  reduceScore: function(){
-    scoreboardApp2.scoreboard -= 1;
-    scoreboardApp2.render();
-  },
-  blur: function(){
-    // scoreboardApp2.name.style.border = 'solid 5px';
-    // scoreboardApp2.name.style.borderColor = "#C1AC81 #F7D7A3 #C1AC81 #A89674";
-    scoreboardApp2.name.style.backgroundColor = '#1AED9C';
-    scoreboardApp2.addButton.style.backgroundColor = '#42FFD2';
-    scoreboardApp2.reduceButton.style.backgroundColor = '#42FFD2';
-  }
-};
-scoreboardApp2.start();
+var scoreboardp2 = scoreboard('.p2', '.score2', '.p2add', '.p2reduce','#1AED9C','#42FFD2','#42FFD2');
+scoreboardp2.start();
 
-var scoreboardApp3 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp3.cacheDom();
-    scoreboardApp3.addEventListeners();
-    scoreboardApp3.render();
-  },
-  cacheDom: function(){
-    scoreboardApp3.name = document.querySelector('.p3');
-    scoreboardApp3.scoreCounter = document.querySelector('.score3');
-    scoreboardApp3.addButton = document.querySelector('.p3add');
-    scoreboardApp3.reduceButton = document.querySelector('.p3reduce');
-  },
-  render: function(){
-    scoreboardApp3.scoreCounter.innerHTML = scoreboardApp3.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp3.addButton.addEventListener('click', scoreboardApp3.addScore);
-    scoreboardApp3.reduceButton.addEventListener('click', scoreboardApp3.reduceScore);
-    scoreboardApp3.name.addEventListener('blur', scoreboardApp3.blur);
-  },
-  addScore: function(){
-    scoreboardApp3.scoreboard += 1;
-    scoreboardApp3.render();
-  },
-  reduceScore: function(){
-    scoreboardApp3.scoreboard -= 1;
-    scoreboardApp3.render();
-  },
-  blur: function(){
-    // scoreboardApp3.name.style.border = 'solid 5px';
-    // scoreboardApp3.name.style.borderColor = "#C1BF81 #F7F7A3 #C1BF81 #A8A374";
-    scoreboardApp3.name.style.backgroundColor = '#53ED00';
-    scoreboardApp3.addButton.style.backgroundColor = '#42FF6B';
-    scoreboardApp3.reduceButton.style.backgroundColor = '#42FF6B';
-  }
-};
-scoreboardApp3.start();
+var scoreboardp3 = scoreboard('.p3', '.score3', '.p3add', '.p3reduce','#53ED00','#42FF6B','#42FF6B');
+scoreboardp3.start();
 
-var scoreboardApp4 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp4.cacheDom();
-    scoreboardApp4.addEventListeners();
-    scoreboardApp4.render();
-  },
-  cacheDom: function(){
-    scoreboardApp4.name = document.querySelector('.p4');
-    scoreboardApp4.scoreCounter = document.querySelector('.score4');
-    scoreboardApp4.addButton = document.querySelector('.p4add');
-    scoreboardApp4.reduceButton = document.querySelector('.p4reduce');
-  },
-  render: function(){
-    scoreboardApp4.scoreCounter.innerHTML = scoreboardApp4.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp4.addButton.addEventListener('click', scoreboardApp4.addScore);
-    scoreboardApp4.reduceButton.addEventListener('click', scoreboardApp4.reduceScore);
-    scoreboardApp4.name.addEventListener('blur', scoreboardApp4.blur);
-  },
-  addScore: function(){
-    scoreboardApp4.scoreboard += 1;
-    scoreboardApp4.render();
-  },
-  reduceScore: function(){
-    scoreboardApp4.scoreboard -= 1;
-    scoreboardApp4.render();
-  },
-  blur: function(){
-    // scoreboardApp4.name.style.border = 'solid 5px';
-    // scoreboardApp4.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
-    scoreboardApp4.name.style.backgroundColor = '#EA19C4';
-    scoreboardApp4.addButton.style.backgroundColor = '#FF42FF';
-    scoreboardApp4.reduceButton.style.backgroundColor = '#FF42FF';
-  }
-};
-scoreboardApp4.start();
+var scoreboardp4 = scoreboard('.p4', '.score4', '.p4add', '.p4reduce','#EA19C4','#FF42FF','#FF42FF');
+scoreboardp4.start();
 
-var scoreboardApp5 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp5.cacheDom();
-    scoreboardApp5.addEventListeners();
-    scoreboardApp5.render();
-  },
-  cacheDom: function(){
-    scoreboardApp5.name = document.querySelector('.p5');
-    scoreboardApp5.scoreCounter = document.querySelector('.score5');
-    scoreboardApp5.addButton = document.querySelector('.p5add');
-    scoreboardApp5.reduceButton = document.querySelector('.p5reduce');
-  },
-  render: function(){
-    scoreboardApp5.scoreCounter.innerHTML = scoreboardApp5.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp5.addButton.addEventListener('click', scoreboardApp5.addScore);
-    scoreboardApp5.reduceButton.addEventListener('click', scoreboardApp5.reduceScore);
-    scoreboardApp5.name.addEventListener('blur', scoreboardApp5.blur);
-  },
-  addScore: function(){
-    scoreboardApp5.scoreboard += 1;
-    scoreboardApp5.render();
-  },
-  reduceScore: function(){
-    scoreboardApp5.scoreboard -= 1;
-    scoreboardApp5.render();
-  },
-  blur: function(){
-    // scoreboardApp5.name.style.border = 'solid 5px';
-    // scoreboardApp5.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
-    scoreboardApp5.name.style.backgroundColor = '#253DED';
-    scoreboardApp5.addButton.style.backgroundColor = '#4255FF';
-    scoreboardApp5.reduceButton.style.backgroundColor = '#4255FF';
-  }
-};
-scoreboardApp5.start();
+var scoreboardp5 = scoreboard('.p5', '.score5', '.p5add', '.p5reduce','#253DED','#4255FF','#4255FF');
+scoreboardp5.start();
 
-var scoreboardApp6 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp6.cacheDom();
-    scoreboardApp6.addEventListeners();
-    scoreboardApp6.render();
-  },
-  cacheDom: function(){
-    scoreboardApp6.name = document.querySelector('.p6');
-    scoreboardApp6.scoreCounter = document.querySelector('.score6');
-    scoreboardApp6.addButton = document.querySelector('.p6add');
-    scoreboardApp6.reduceButton = document.querySelector('.p6reduce');
-  },
-  render: function(){
-    scoreboardApp6.scoreCounter.innerHTML = scoreboardApp6.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp6.addButton.addEventListener('click', scoreboardApp6.addScore);
-    scoreboardApp6.reduceButton.addEventListener('click', scoreboardApp6.reduceScore);
-    scoreboardApp6.name.addEventListener('blur', scoreboardApp6.blur);
-  },
-  addScore: function(){
-    scoreboardApp6.scoreboard += 1;
-    scoreboardApp6.render();
-  },
-  reduceScore: function(){
-    scoreboardApp6.scoreboard -= 1;
-    scoreboardApp6.render();
-  },
-  blur: function(){
-    // scoreboardApp6.name.style.border = 'solid 5px';
-    // scoreboardApp6.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
-    scoreboardApp6.name.style.backgroundColor = '#FF6D0C';
-    scoreboardApp6.addButton.style.backgroundColor = '#FF7E42';
-    scoreboardApp6.reduceButton.style.backgroundColor = '#FF7E42';
-  }
-};
-scoreboardApp6.start();
+var scoreboardp6 = scoreboard('.p6', '.score6', '.p6add', '.p6reduce','#FF6D0C','#FF7E42','#FF7E42');
+scoreboardp6.start();
 
-var scoreboardApp7 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp7.cacheDom();
-    scoreboardApp7.addEventListeners();
-    scoreboardApp7.render();
-  },
-  cacheDom: function(){
-    scoreboardApp7.name = document.querySelector('.p7');
-    scoreboardApp7.scoreCounter = document.querySelector('.score7');
-    scoreboardApp7.addButton = document.querySelector('.p7add');
-    scoreboardApp7.reduceButton = document.querySelector('.p7reduce');
-  },
-  render: function(){
-    scoreboardApp7.scoreCounter.innerHTML = scoreboardApp7.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp7.addButton.addEventListener('click', scoreboardApp7.addScore);
-    scoreboardApp7.reduceButton.addEventListener('click', scoreboardApp7.reduceScore);
-    scoreboardApp7.name.addEventListener('blur', scoreboardApp7.blur);
-  },
-  addScore: function(){
-    scoreboardApp7.scoreboard += 1;
-    scoreboardApp7.render();
-  },
-  reduceScore: function(){
-    scoreboardApp7.scoreboard -= 1;
-    scoreboardApp7.render();
-  },
-  blur: function(){
-    // scoreboardApp.name.style.border = 'solid 5px';
-    // scoreboardApp.name.style.borderColor = "";
-    scoreboardApp7.name.style.backgroundColor = '#ED0E0E';
-    scoreboardApp7.addButton.style.backgroundColor = '#FF4242';
-    scoreboardApp7.reduceButton.style.backgroundColor = '#FF4242';
-  }
-};
-scoreboardApp7.start();
+var scoreboardp7 = scoreboard('.p7', '.score7', '.p7add', '.p7reduce', '#ED0E0E', '#FF4242', '#FF4242');
+scoreboardp7.start();
 
-var scoreboardApp8 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp8.cacheDom();
-    scoreboardApp8.addEventListeners();
-    scoreboardApp8.render();
-  },
-  cacheDom: function(){
-    scoreboardApp8.name = document.querySelector('.p8');
-    scoreboardApp8.scoreCounter = document.querySelector('.score8');
-    scoreboardApp8.addButton = document.querySelector('.p8add');
-    scoreboardApp8.reduceButton = document.querySelector('.p8reduce');
-  },
-  render: function(){
-    scoreboardApp8.scoreCounter.innerHTML = scoreboardApp8.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp8.addButton.addEventListener('click', scoreboardApp8.addScore);
-    scoreboardApp8.reduceButton.addEventListener('click', scoreboardApp8.reduceScore);
-    scoreboardApp8.name.addEventListener('blur', scoreboardApp8.blur);
-  },
-  addScore: function(){
-    scoreboardApp8.scoreboard += 1;
-    scoreboardApp8.render();
-  },
-  reduceScore: function(){
-    scoreboardApp8.scoreboard -= 1;
-    scoreboardApp8.render();
-  },
-  blur: function(){
-    // scoreboardApp2.name.style.border = 'solid 5px';
-    // scoreboardApp2.name.style.borderColor = "#C1AC81 #F7D7A3 #C1AC81 #A89674";
-    scoreboardApp8.name.style.backgroundColor = '#1AED9C';
-    scoreboardApp8.addButton.style.backgroundColor = '#42FFD2';
-    scoreboardApp8.reduceButton.style.backgroundColor = '#42FFD2';
-  }
-};
-scoreboardApp8.start();
+var scoreboardp8 = scoreboard('.p8', '.score8', '.p8add', '.p8reduce', '#1AED9C','#42FFD2','#42FFD2');
+scoreboardp8.start();
 
-var scoreboardApp9 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp9.cacheDom();
-    scoreboardApp9.addEventListeners();
-    scoreboardApp9.render();
-  },
-  cacheDom: function(){
-    scoreboardApp9.name = document.querySelector('.p9');
-    scoreboardApp9.scoreCounter = document.querySelector('.score9');
-    scoreboardApp9.addButton = document.querySelector('.p9add');
-    scoreboardApp9.reduceButton = document.querySelector('.p9reduce');
-  },
-  render: function(){
-    scoreboardApp9.scoreCounter.innerHTML = scoreboardApp9.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp9.addButton.addEventListener('click', scoreboardApp9.addScore);
-    scoreboardApp9.reduceButton.addEventListener('click', scoreboardApp9.reduceScore);
-    scoreboardApp9.name.addEventListener('blur', scoreboardApp9.blur);
-  },
-  addScore: function(){
-    scoreboardApp9.scoreboard += 1;
-    scoreboardApp9.render();
-  },
-  reduceScore: function(){
-    scoreboardApp9.scoreboard -= 1;
-    scoreboardApp9.render();
-  },
-  blur: function(){
-    // scoreboardApp3.name.style.border = 'solid 5px';
-    // scoreboardApp3.name.style.borderColor = "#C1BF81 #F7F7A3 #C1BF81 #A8A374";
-    scoreboardApp9.name.style.backgroundColor = '#53ED00';
-    scoreboardApp9.addButton.style.backgroundColor = '#42FF6B';
-    scoreboardApp9.reduceButton.style.backgroundColor = '#42FF6B';
-  }
-};
-scoreboardApp9.start();
+var scoreboardp9 = scoreboard('.p9', '.score9', '.p9add', '.p9reduce', '#53ED00','#42FF6B','#42FF6B');
+scoreboardp9.start();
 
-var scoreboardApp10 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp10.cacheDom();
-    scoreboardApp10.addEventListeners();
-    scoreboardApp10.render();
-  },
-  cacheDom: function(){
-    scoreboardApp10.name = document.querySelector('.p10');
-    scoreboardApp10.scoreCounter = document.querySelector('.score10');
-    scoreboardApp10.addButton = document.querySelector('.p10add');
-    scoreboardApp10.reduceButton = document.querySelector('.p10reduce');
-  },
-  render: function(){
-    scoreboardApp10.scoreCounter.innerHTML = scoreboardApp10.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp10.addButton.addEventListener('click', scoreboardApp10.addScore);
-    scoreboardApp10.reduceButton.addEventListener('click', scoreboardApp10.reduceScore);
-    scoreboardApp10.name.addEventListener('blur', scoreboardApp10.blur);
-  },
-  addScore: function(){
-    scoreboardApp10.scoreboard += 1;
-    scoreboardApp10.render();
-  },
-  reduceScore: function(){
-    scoreboardApp10.scoreboard -= 1;
-    scoreboardApp10.render();
-  },
-  blur: function(){
-    // scoreboardApp10.name.style.border = 'solid 5px';
-    // scoreboardApp10.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
-    scoreboardApp10.name.style.backgroundColor = '#EA19C4';
-    scoreboardApp10.addButton.style.backgroundColor = '#FF42FF';
-    scoreboardApp10.reduceButton.style.backgroundColor = '#FF42FF';
-  }
-};
-scoreboardApp10.start();
+var scoreboardp10 = scoreboard('.p10', '.score10', '.p10add', '.p10reduce', '#EA19C4','#FF42FF','#FF42FF');
+scoreboardp10.start();
 
-var scoreboardApp11 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp11.cacheDom();
-    scoreboardApp11.addEventListeners();
-    scoreboardApp11.render();
-  },
-  cacheDom: function(){
-    scoreboardApp11.name = document.querySelector('.p11');
-    scoreboardApp11.scoreCounter = document.querySelector('.score11');
-    scoreboardApp11.addButton = document.querySelector('.p11add');
-    scoreboardApp11.reduceButton = document.querySelector('.p11reduce');
-  },
-  render: function(){
-    scoreboardApp11.scoreCounter.innerHTML = scoreboardApp11.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp11.addButton.addEventListener('click', scoreboardApp11.addScore);
-    scoreboardApp11.reduceButton.addEventListener('click', scoreboardApp11.reduceScore);
-    scoreboardApp11.name.addEventListener('blur', scoreboardApp11.blur);
-  },
-  addScore: function(){
-    scoreboardApp11.scoreboard += 1;
-    scoreboardApp11.render();
-  },
-  reduceScore: function(){
-    scoreboardApp11.scoreboard -= 1;
-    scoreboardApp11.render();
-  },
-  blur: function(){
-    // scoreboardApp11.name.style.border = 'solid 5px';
-    // scoreboardApp11.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
-    scoreboardApp11.name.style.backgroundColor = '#253DED';
-    scoreboardApp11.addButton.style.backgroundColor = '#4255FF';
-    scoreboardApp11.reduceButton.style.backgroundColor = '#4255FF';
-  }
-};
-scoreboardApp11.start();
+var scoreboardp11 = scoreboard('.p11', '.score11', '.p11add', '.p11reduce', '#253DED','#4255FF','#4255FF');
+scoreboardp11.start();
 
-var scoreboardApp12 = {
-  scoreboard: 0,
-  start: function(){
-    scoreboardApp12.cacheDom();
-    scoreboardApp12.addEventListeners();
-    scoreboardApp12.render();
-  },
-  cacheDom: function(){
-    scoreboardApp12.name = document.querySelector('.p12');
-    scoreboardApp12.scoreCounter = document.querySelector('.score12');
-    scoreboardApp12.addButton = document.querySelector('.p12add');
-    scoreboardApp12.reduceButton = document.querySelector('.p12reduce');
-  },
-  render: function(){
-    scoreboardApp12.scoreCounter.innerHTML = scoreboardApp12.scoreboard;
-  },
-  addEventListeners: function(){
-    scoreboardApp12.addButton.addEventListener('click', scoreboardApp12.addScore);
-    scoreboardApp12.reduceButton.addEventListener('click', scoreboardApp12.reduceScore);
-    scoreboardApp12.name.addEventListener('blur', scoreboardApp12.blur);
-  },
-  addScore: function(){
-    scoreboardApp12.scoreboard += 1;
-    scoreboardApp12.render();
-  },
-  reduceScore: function(){
-    scoreboardApp12.scoreboard -= 1;
-    scoreboardApp12.render();
-  },
-  blur: function(){
-    // scoreboardApp12.name.style.border = 'solid 5px';
-    // scoreboardApp12.name.style.borderColor = "#83C4A3 #A2F9CC #83C4A3 #75AA90";
-    scoreboardApp12.name.style.backgroundColor = '#FF6D0C';
-    scoreboardApp12.addButton.style.backgroundColor = '#FF7E42';
-    scoreboardApp12.reduceButton.style.backgroundColor = '#FF7E42';
-  }
-};
-scoreboardApp12.start();
-
-var headerBlur = {
-  start: function(){
-    headerBlur.cacheDom();
-    headerBlur.addEventListeners();
-  },
-  cacheDom: function(){
-    headerBlur.header = document.querySelector('header input.header');
-    headerBlur.header2 = document.querySelector('header input.header2');
-  },
-  addEventListeners: function(){
-    headerBlur.header.addEventListener('blur', headerBlur.blur);
-    headerBlur.header2.addEventListener('blur', headerBlur.blur2);
-  },
-  blur: function(){
-    headerBlur.header.style.backgroundColor = 'black';
-  },
-  blur2: function (){
-    headerBlur.header2.style.backgroundColor = 'black';
-  }
-};
-headerBlur.start();
+var scoreboardp12 = scoreboard('.p12', '.score12', '.p12add', '.p12reduce', '#FF6D0C','#FF7E42','#FF7E42');
+scoreboardp12.start();
